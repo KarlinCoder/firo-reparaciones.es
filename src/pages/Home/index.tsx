@@ -1,3 +1,4 @@
+import { Chatbot } from "../../components/Chatbot";
 import { AboutMe } from "./sections/AboutMe";
 import { Experience } from "./sections/Experience";
 import { Header } from "./sections/Header";
@@ -8,10 +9,13 @@ export const HomePage = () => {
   return (
     <>
       <Header />
-      <AboutMe />
-      <Experience />
-      <Services />
-      <WhyUs />
+      <div className="bg-pattern">
+        <AboutMe />
+        <Experience />
+        <Services />
+        <WhyUs />
+      </div>
+      <Chatbot />
     </>
   );
 };
