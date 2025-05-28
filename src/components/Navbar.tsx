@@ -7,36 +7,24 @@ import {
   FaWhatsapp,
   FaPhoneAlt,
 } from "react-icons/fa";
-import { FiChevronDown } from "react-icons/fi";
 import logo from "/icons/logo.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
 
   const navLinks = [
     { href: "#inicio", text: "Inicio" },
     {
       href: "#servicios",
       text: "Servicios",
-      submenu: [
-        { href: "#lavadoras", text: "Lavadoras" },
-        { href: "#frigorificos", text: "Frigoríficos" },
-        { href: "#hornos", text: "Hornos" },
-        { href: "#lavavajillas", text: "Lavavajillas" },
-      ],
     },
     { href: "#experiencia", text: "Experiencia" },
     { href: "#testimonios", text: "Clientes" },
     { href: "#contacto", text: "Contacto" },
   ];
 
-  const toggleSubmenu = (item: string) => {
-    setMobileSubmenu(mobileSubmenu === item ? null : item);
-  };
-
   return (
-    <nav className="sticky w-full bg-gray-950/80 backdrop-blur-md border-b border-gray-800/50 z-50">
+    <nav className="sticky w-full bg-gray-950/95 backdrop-blur-md border-b border-gray-800/50 z-50">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo y marca */}
@@ -60,26 +48,7 @@ export const Navbar = () => {
                   className="px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center gap-1"
                 >
                   {link.text}
-                  {link.submenu && (
-                    <FiChevronDown className="text-xs mt-0.5 opacity-70 group-hover:rotate-180 transition-transform" />
-                  )}
                 </a>
-
-                {link.submenu && (
-                  <div className="absolute left-0 mt-2 w-56 origin-top-right rounded-xl bg-gray-900 border border-gray-800 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-1">
-                      {link.submenu.map((subItem) => (
-                        <a
-                          key={subItem.href}
-                          href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-emerald-400"
-                        >
-                          {subItem.text}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </div>
@@ -133,48 +102,9 @@ export const Navbar = () => {
             <div className="px-5 pt-2 pb-4 space-y-1">
               {navLinks.map((link) => (
                 <div key={link.href}>
-                  <div
-                    onClick={() =>
-                      link.submenu
-                        ? toggleSubmenu(link.text)
-                        : setMenuOpen(false)
-                    }
-                    className="flex justify-between items-center px-3 py-3 rounded-lg text-base font-medium text-gray-300 hover:text-emerald-400 hover:bg-gray-800/50 cursor-pointer"
-                  >
-                    <a
-                      href={!link.submenu ? link.href : "#"}
-                      className="flex-1"
-                    >
-                      {link.text}
-                    </a>
-                    {link.submenu && (
-                      <FiChevronDown
-                        className={`text-xs mt-0.5 transition-transform ${
-                          mobileSubmenu === link.text ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
-                  </div>
-
-                  {link.submenu && mobileSubmenu === link.text && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      transition={{ duration: 0.2 }}
-                      className="pl-4"
-                    >
-                      {link.submenu.map((subItem) => (
-                        <a
-                          key={subItem.href}
-                          href={subItem.href}
-                          onClick={() => setMenuOpen(false)}
-                          className="block px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-emerald-400 hover:bg-gray-800/30"
-                        >
-                          {subItem.text}
-                        </a>
-                      ))}
-                    </motion.div>
-                  )}
+                  <a href={link.href} className="flex-1">
+                    {link.text}
+                  </a>
                 </div>
               ))}
 

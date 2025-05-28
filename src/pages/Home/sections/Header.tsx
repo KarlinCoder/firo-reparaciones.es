@@ -4,21 +4,20 @@ import { FiCheckCircle } from "react-icons/fi";
 
 export const Header = () => {
   return (
-    <header className="relative w-full min-h-screen overflow-hidden">
-      {/* Fondo con opacidad controlada */}
+    <header className="relative w-full min-h-screen overflow-hidden flex items-center">
+      {/* Fondo con imagen */}
       <div
-        className="absolute inset-0 bg-[url(/fondoPresentation.jpg)] bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
-          opacity: 0.5,
-          filter: "brightness(0.7) contrast(1.2)",
+          backgroundImage: "url('/fondoPresentation.jpg')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          filter: "brightness(0.8) contrast(1.1)",
+          transition: "background-image 0.5s ease-in-out",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/40 via-gray-950/60 to-emerald-900/20"></div>
-      </div>
-
-      {/* Efecto de ruido sutil */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+        {/* Degradado suave sobre la imagen */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950/90 to-emerald-700/50"></div>
       </div>
 
       {/* Contenido principal alineado a izquierda */}
