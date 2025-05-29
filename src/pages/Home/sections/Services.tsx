@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import {
   FaTools,
   FaShieldAlt,
@@ -63,13 +62,7 @@ export const Services = () => {
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
         {/* Encabezado */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-emerald-900/20 border border-emerald-400/20 text-emerald-400 text-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             Soluciones Técnicas
@@ -81,18 +74,12 @@ export const Services = () => {
             Reparaciones profesionales para mantener tus electrodomésticos
             funcionando como nuevos
           </p>
-        </motion.div>
+        </div>
 
         {/* Contenido principal */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Tarjeta principal */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="lg:w-2/3 bg-gray-900/60 backdrop-blur-sm rounded-2xl border border-gray-800 overflow-hidden relative h-full"
-          >
+          <div className="lg:w-2/3 bg-gray-900/60 backdrop-blur-sm rounded-2xl border border-gray-800 overflow-hidden relative h-full">
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/30 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute top-0 left-0 w-1/2 h-full overflow-hidden">
               <img
@@ -119,29 +106,18 @@ export const Services = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {services.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="flex items-center gap-3"
-                  >
+                  <div key={index} className="flex items-center gap-3">
                     <div className="p-1 bg-emerald-900/50 rounded-full">
                       <FaCheckCircle className="text-emerald-400 text-sm" />
                     </div>
                     <span className="text-gray-300 text-sm md:text-base">
                       {service}
                     </span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-                className="flex justify-start pt-2"
-              >
+              <div className="flex justify-start pt-2">
                 <a
                   href="#contacto"
                   className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-400/20"
@@ -150,20 +126,15 @@ export const Services = () => {
                   Contactar Ahora
                   <FiArrowRight className="ml-1 transition-transform group-hover:translate-x-1" />
                 </a>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Tarjetas secundarias */}
           <div className="lg:w-1/3 flex flex-col gap-6">
             {serviceCards.map((card, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: card.delay }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
                 className="bg-gray-900/60 hover:bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-emerald-400/30 transition-all duration-300 shadow-lg hover:shadow-emerald-400/10"
               >
                 <div className="flex items-start gap-4">
@@ -181,7 +152,7 @@ export const Services = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

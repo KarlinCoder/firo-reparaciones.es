@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import {
   FaTools,
   FaHome,
@@ -11,11 +9,6 @@ import {
 import React from "react";
 
 export const WhyUs = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   const features = [
     {
       icon: <FaTools />,
@@ -57,7 +50,6 @@ export const WhyUs = () => {
 
   return (
     <section
-      ref={ref}
       id="whyus"
       className="relative bg-transparent py-24 overflow-hidden"
     >
@@ -69,12 +61,7 @@ export const WhyUs = () => {
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
         {/* Encabezado */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-emerald-900/20 border border-emerald-400/20 text-emerald-400 text-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             Ventajas Exclusivas
@@ -86,24 +73,13 @@ export const WhyUs = () => {
             Excelencia técnica y un servicio personalizado que marca la
             diferencia
           </p>
-        </motion.div>
+        </div>
 
         {/* Características */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{
-                duration: 0.7,
-                delay: feature.delay,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              whileHover={{
-                y: -8,
-                transition: { duration: 0.3 },
-              }}
               className="bg-gray-900/60 hover:bg-gray-900/80 backdrop-blur-sm rounded-xl p-8 border border-gray-800 hover:border-emerald-400/30 transition-all duration-300 shadow-lg hover:shadow-emerald-400/10"
             >
               {/* Ícono */}
@@ -122,17 +98,12 @@ export const WhyUs = () => {
                 </h3>
                 <p className="text-gray-400">{feature.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Texto adicional */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center max-w-4xl mx-auto"
-        >
+        <div className="mt-16 text-center max-w-4xl mx-auto">
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
             <p className="text-lg text-gray-300 leading-relaxed">
               En FIRO Reparaciones no solo solucionamos problemas técnicos,
@@ -144,7 +115,7 @@ export const WhyUs = () => {
               condiciones.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

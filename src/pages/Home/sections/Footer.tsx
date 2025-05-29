@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -23,13 +22,7 @@ export const Footer = () => {
         {/* Contenido principal */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-gray-300">
           {/* Sección Logo y descripción */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="space-y-5"
-          >
+          <div className="space-y-5">
             <div className="flex items-center gap-3">
               <img src={img1} alt="FIRO Reparaciones" className="w-10 h-10" />
               <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
@@ -66,16 +59,10 @@ export const Footer = () => {
                 <FaWhatsapp className="text-xl" />
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Sección Contacto */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="space-y-5"
-          >
+          <div className="space-y-5">
             <h4 className="text-lg font-semibold text-white">Contacto</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -106,16 +93,10 @@ export const Footer = () => {
                 </div>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
           {/* Sección Horario */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="space-y-5"
-          >
+          <div className="space-y-5">
             <h4 className="text-lg font-semibold text-white">Horario</h4>
             <div className="flex items-start gap-3">
               <FiClock className="text-emerald-400 mt-1 flex-shrink-0" />
@@ -127,16 +108,10 @@ export const Footer = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Sección Enlaces rápidos */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="space-y-5"
-          >
+          <div className="space-y-5">
             <h4 className="text-lg font-semibold text-white">Enlaces</h4>
             <ul className="space-y-3">
               {[
@@ -157,17 +132,11 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Línea divisoria y copyright */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 pt-6 border-t border-gray-800/50"
-        >
+        <div className="mt-16 pt-6 border-t border-gray-800/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
             <p>
               © {new Date().getFullYear()} FIRO Reparaciones. Todos los derechos
@@ -177,7 +146,7 @@ export const Footer = () => {
               Servicio técnico profesional en Mallorca
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </footer>
   );
