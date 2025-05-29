@@ -135,10 +135,10 @@ export const Services = () => {
             {serviceCards.map((card, index) => (
               <div
                 key={index}
-                className="bg-gray-900/60 hover:bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-emerald-400/30 transition-all duration-300 shadow-lg hover:shadow-emerald-400/10"
+                className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-6 border border-gray-800 transition-all duration-300 shadow-lg "
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-emerald-900/20 rounded-lg group-hover:bg-emerald-400/10 transition">
+                  <div className="p-3 bg-emerald-900/20 rounded-lg transition">
                     {React.cloneElement(card.icon, {
                       className: "text-xl text-emerald-400",
                     })}

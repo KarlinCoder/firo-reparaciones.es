@@ -75,16 +75,16 @@ export const WhyUs = () => {
           </p>
         </div>
 
-        {/* Características */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Características - Responsivo añadido con grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gray-900/60 hover:bg-gray-900/80 backdrop-blur-sm rounded-xl p-8 border border-gray-800 hover:border-emerald-400/30 transition-all duration-300 shadow-lg hover:shadow-emerald-400/10"
+              className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-gray-800 transition-all duration-300 shadow-lg"
             >
               {/* Ícono */}
               <div className="flex justify-center mb-6">
-                <div className="p-4 bg-emerald-900/20 rounded-lg group-hover:bg-emerald-400/10 transition">
+                <div className="p-4 bg-emerald-900/20 rounded-lg transition">
                   {React.cloneElement(feature.icon, {
                     className: "text-3xl text-emerald-400",
                   })}
