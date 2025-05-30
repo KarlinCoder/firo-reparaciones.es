@@ -75,11 +75,11 @@ export const Experience = () => {
         </div>
 
         {/* Contadores mejorados */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-gray-800 transition-all duration-300 shadow-lg"
+              className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-gray-800 transition-all duration-300 shadow-lg max-w-[300px]"
             >
               <div className="flex flex-col items-center text-center h-full">
                 <div className="mb-3 sm:mb-4 p-2 sm:p-3 bg-emerald-900/20 rounded-full">
