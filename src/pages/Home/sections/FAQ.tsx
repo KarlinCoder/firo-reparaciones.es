@@ -23,7 +23,7 @@ export const FAQSection = () => {
     },
     {
       question: "¿Cómo funciona la garantía de sus reparaciones?",
-      answer: "Ofrecemos 12 meses de garantía en todas nuestras reparaciones.",
+      answer: "Ofrecemos 6 meses de garantía en todas nuestras reparaciones.",
     },
     {
       question: "¿Tienen costo por diagnóstico?",
@@ -31,8 +31,7 @@ export const FAQSection = () => {
     },
     {
       question: "¿Qué áreas geográficas cubren?",
-      answer:
-        "Servimos toda el área metropolitana sin costo de desplazamiento.",
+      answer: "Recorremos toda la isla sin costo de desplazamiento.",
     },
   ];
 

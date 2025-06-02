@@ -8,7 +8,7 @@ export const Services = () => {
     "Lavavajillas",
     "Hornos y Microondas",
     "Aires Acondicionados",
-    "Batidoras",
+    "Y otros tipos de electromésticos.",
   ];
 
   const serviceCards = [
