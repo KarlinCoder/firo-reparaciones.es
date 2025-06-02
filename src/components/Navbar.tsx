@@ -107,7 +107,7 @@ export const Navbar = () => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
-              className="fixed top-[81px] left-0 right-0 bg-neutral-950/70 backdrop-blur-2xl backdrop-blur-lg border-b border-gray-800/50 z-50 shadow-xl"
+              className="fixed top-[81px] left-0 right-0 bg-neutral-950/70 backdrop-blur-xl border-b border-gray-800/50 z-50 shadow-xl"
             >
               <div className="px-4 pt-2 pb-6 space-y-2">
                 {navLinks.map((link) => (
