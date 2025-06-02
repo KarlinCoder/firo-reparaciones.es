@@ -9,8 +9,6 @@ export const Services = () => {
     "Hornos y Microondas",
     "Aires Acondicionados",
     "Batidoras",
-    "Placas de cocina",
-    "Campanas extractoras",
   ];
 
   const serviceCards = [

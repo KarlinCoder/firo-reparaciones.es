@@ -14,7 +14,7 @@ export const AboutMe = () => {
     {
       icon: <FiCheckCircle className="text-lg sm:text-xl text-emerald-400" />,
       title: "Garantía Extendida",
-      description: "Reparaciones con garantía documentada de 12 meses",
+      description: "Reparaciones con garantía documentada de 6 meses",
       delay: 0.4,
     },
     {
@@ -57,12 +57,12 @@ export const AboutMe = () => {
             </h2>
 
             <div className="prose prose-invert max-w-none sm:max-w-xl md:max-w-2xl mb-6 sm:mb-8">
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-3 sm:mb-4">
+              <p className="text-sm sm:text-base md:text-md text-gray-300 mb-3 sm:mb-4">
                 Soy <strong className="text-emerald-400">Julio</strong>, técnico
-                especialista con más de 7 años resolviendo problemas complejos
+                especialista con más de 20 años resolviendo problemas complejos
                 en electrodomésticos de todas las marcas.
               </p>
-              <p className="text-gray-400 text-xs sm:text-sm md:text-base">
+              <p className="text-sm sm:text-base md:text-md text-gray-300 mb-3 sm:mb-4">
                 Mi metodología se basa en diagnósticos precisos, repuestos de
                 calidad y transparencia absoluta. Si no merece la pena
                 repararlo,{" "}

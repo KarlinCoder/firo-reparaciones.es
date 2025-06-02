@@ -37,7 +37,7 @@ export const WhyUs = () => {
     {
       icon: <FaShieldAlt />,
       title: "Garantía Extendida",
-      description: "12 meses de garantía en todas nuestras reparaciones",
+      description: "6 meses de garantía en todas nuestras reparaciones",
       delay: 0.5,
     },
     {
@@ -76,7 +76,7 @@ export const WhyUs = () => {
         </div>
 
         {/* Características - Responsivo añadido con grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[1000px] mx-auto px-5">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -103,9 +103,9 @@ export const WhyUs = () => {
         </div>
 
         {/* Texto adicional */}
-        <div className="mt-16 text-center max-w-4xl mx-auto">
+        <div className="mt-16 text-center max-w-4xl mx-auto px-3">
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-md text-gray-300 leading-relaxed">
               En FIRO Reparaciones no solo solucionamos problemas técnicos,
               creamos relaciones de confianza. Cada servicio incluye{" "}
               <span className="text-emerald-400">

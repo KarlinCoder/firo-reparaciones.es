@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
 import img1 from "/icons/logo.png";
+import { Link as LinkScroll } from "react-scroll";
 
 export const Footer = () => {
   return (
@@ -25,7 +26,7 @@ export const Footer = () => {
           <div className="space-y-5">
             <div className="flex items-center gap-3">
               <img src={img1} alt="FIRO Reparaciones" className="w-10 h-10" />
-              <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-white italic ml-[-7px]">
                 FIRO Reparaciones
               </span>
             </div>
@@ -68,7 +69,7 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaPhoneAlt className="text-emerald-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-white">+34 612 345 678</p>
+                  <p className="text-white">680423892</p>
                   <p className="text-sm text-gray-400">
                     Disponible 24/7 para emergencias
                   </p>
@@ -77,7 +78,7 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaEnvelope className="text-emerald-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-white">info@firoreparaciones.com</p>
+                  <p className="text-white">firo.reparaciones@gmail.com</p>
                   <p className="text-sm text-gray-400">
                     Respuesta en menos de 24h
                   </p>
@@ -115,20 +116,23 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold text-white">Enlaces</h4>
             <ul className="space-y-3">
               {[
-                { name: "Inicio", href: "#inicio" },
-                { name: "Servicios", href: "#servicios" },
-                { name: "Sobre mí", href: "#sobremi" },
-                { name: "Experiencia", href: "#experiencia" },
-                { name: "Contacto", href: "#contacto" },
+                { href: "inicio", text: "Inicio" },
+                { href: "sobremi", text: "Sobre Mi" },
+                { href: "servicios", text: "Servicios" },
+                { href: "experiencia", text: "Experiencia" },
+                { href: "preguntasfrecuentes", text: "FAQ" },
+                { href: "porquenosotros", text: "¿Porque Nosotros?" },
               ].map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <LinkScroll
+                    smooth={true}
+                    duration={400}
+                    to={link.href}
                     className="flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors group"
                   >
                     <span className="w-2 h-2 rounded-full bg-emerald-400 opacity-0 group-hover:opacity-100 transition"></span>
-                    {link.name}
-                  </a>
+                    {link.text}
+                  </LinkScroll>
                 </li>
               ))}
             </ul>

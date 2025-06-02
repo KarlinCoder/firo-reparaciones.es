@@ -27,8 +27,7 @@ export const FAQSection = () => {
     },
     {
       question: "¿Tienen costo por diagnóstico?",
-      answer:
-        "El diagnóstico es completamente gratuito si procede con la reparación con nosotros.",
+      answer: "No, no cobramos por diagnósticos.",
     },
     {
       question: "¿Qué áreas geográficas cubren?",
@@ -53,7 +52,7 @@ export const FAQSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-3">
+        <div className="max-w-4xl mx-auto space-y-3 px-5">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -61,10 +60,10 @@ export const FAQSection = () => {
             >
               <div className="w-full flex justify-between items-center p-4 sm:p-5 bg-gray-900/60">
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="p-2 bg-emerald-900/20 rounded-lg text-emerald-400">
+                  <div className="px-2 bg-emerald-900/20 rounded-lg text-emerald-400">
                     <FaQuestionCircle className="text-lg" />
                   </div>
-                  <h3 className="text-left font-medium text-white">
+                  <h3 className="text-left font-medium text-white text-[1rem]">
                     {faq.question}
                   </h3>
                 </div>

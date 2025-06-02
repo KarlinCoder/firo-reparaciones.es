@@ -1,16 +1,14 @@
 import { useState } from "react";
 import {
   FaHandsClapping,
-  FaHouseCircleCheck,
   FaRegHourglassHalf,
   FaUserGroup,
 } from "react-icons/fa6";
 
 export const Experience = () => {
   // Estados para los contadores
-  const [years] = useState(7);
+  const [years] = useState(20);
   const [clients] = useState(300);
-  const [homes] = useState(110);
   const [satisfaction] = useState(99.7);
 
   // Datos de las métricas mejoradas
@@ -30,15 +28,6 @@ export const Experience = () => {
       label: "Clientes satisfechos",
       suffix: "+",
       delay: 0.3,
-    },
-    {
-      icon: (
-        <FaHouseCircleCheck className="text-xl sm:text-2xl text-emerald-400" />
-      ),
-      value: homes,
-      label: "Visitas a domicilio",
-      suffix: "+",
-      delay: 0.4,
     },
     {
       icon: (
@@ -81,11 +70,11 @@ export const Experience = () => {
         </div>
 
         {/* Contadores mejorados */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 px-5 sm:px-0 max-w-[900px] mx-auto justify-items-center">
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-800 transition-all duration-300 shadow-lg w-full h-full"
+              className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-800 transition-all duration-300 shadow-lg w-full h-full max-w-[300px] justify-items-center"
             >
               <div className="flex flex-col items-center text-center h-full">
                 <div className="mb-3 p-2 sm:p-3 bg-emerald-900/20 rounded-full">
@@ -104,9 +93,9 @@ export const Experience = () => {
         </div>
 
         {/* Texto descriptivo mejorado */}
-        <div className="mt-12 sm:mt-16 text-center max-w-xl sm:max-w-2xl md:max-w-4xl mx-auto">
+        <div className="mt-12 sm:mt-16 px-5 sm:px-0 text-center max-w-xl sm:max-w-2xl md:max-w-4xl mx-auto">
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-gray-800">
-            <p className="text-sm sm:text-lg text-gray-300 leading-relaxed">
+            <p className="text-sm sm:text-md text-gray-300 leading-relaxed">
               Con más de{" "}
               <span className="text-emerald-400 font-semibold">
                 {years} años
@@ -114,10 +103,6 @@ export const Experience = () => {
               de experiencia, he atendido personalmente a{" "}
               <span className="text-emerald-400 font-semibold">
                 {clients}+ clientes
-              </span>{" "}
-              en más de{" "}
-              <span className="text-emerald-400 font-semibold">
-                {homes}+ visitas a domicilio
               </span>
               , manteniendo un{" "}
               <span className="text-emerald-400 font-semibold">

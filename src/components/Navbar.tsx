@@ -52,14 +52,14 @@ export const Navbar = () => {
             {/* Botones de contacto desktop */}
             <div className="hidden min-[1172px]:flex items-center space-x-2 sm:space-x-3 ml-4 sm:ml-6">
               <a
-                href="tel:+34612345678"
+                href="tel:680423892"
                 className="flex items-center px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-emerald-400 hover:bg-gray-800/50 border border-emerald-400/20 hover:border-emerald-400/40 transition-colors duration-300"
               >
                 <FaPhoneAlt className="mr-1 sm:mr-2" />
                 Llamar
               </a>
               <a
-                href="https://wa.me/34612345678"
+                href="https://wa.me/34680423892"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300 shadow-lg hover:shadow-emerald-400/20"
@@ -124,7 +124,7 @@ export const Navbar = () => {
 
                 <div className="pt-2 space-y-2">
                   <a
-                    href="tel:+34612345678"
+                    href="tel:680423892"
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center justify-center w-full px-4 py-3 rounded-lg text-base font-medium text-white bg-gray-800 hover:bg-gray-700/80 border border-gray-700 transition-colors duration-200"
                   >

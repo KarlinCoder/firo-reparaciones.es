@@ -1,5 +1,4 @@
 import { FaTools, FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
-import { FiArrowRight } from "react-icons/fi";
 
 export const ServiceCard = ({ services }: { services: string[] }) => {
   return (
@@ -41,11 +40,10 @@ export const ServiceCard = ({ services }: { services: string[] }) => {
       <div className="flex justify-start">
         <a
           href="#contacto"
-          className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-4 py-2 sm:px-6 sm:py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-400/20 text-sm sm:text-base"
+          className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-4 py-2.5 rounded-md transition-all duration-300 text-sm"
         >
           <FaPhoneAlt className="text-xs sm:text-sm" />
           Contactar Ahora
-          <FiArrowRight className="ml-1 transition-transform group-hover:translate-x-1 text-xs sm:text-sm" />
         </a>
       </div>
     </div>
