@@ -113,7 +113,7 @@ export const AboutMe = () => {
               {/* Experience badge */}
               <div className="absolute -bottom-3 sm:-bottom-4 -right-3 sm:-right-4 bg-gradient-to-br from-emerald-600 to-emerald-400 text-gray-950 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-bold shadow-lg flex items-center gap-1 sm:gap-2 text-xs sm:text-sm">
                 <FaAward className="text-sm sm:text-base md:text-lg" />
-                <span>+7 Años</span>
+                <span>+20 Años</span>
               </div>
 
               {/* Decorative element */}
