@@ -1,4 +1,3 @@
-import React from "react";
 import { FaShieldAlt, FaClock, FaHome, FaCalendarAlt } from "react-icons/fa";
 import { ServiceCard } from "../components/ServiceCard";
 
