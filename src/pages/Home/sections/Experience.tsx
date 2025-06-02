@@ -11,33 +11,39 @@ export const Experience = () => {
   const [years] = useState(7);
   const [clients] = useState(300);
   const [homes] = useState(110);
-  const [satisfaction] = useState(97);
+  const [satisfaction] = useState(99.7);
 
   // Datos de las métricas mejoradas
   const metrics = [
     {
-      icon: <FaRegHourglassHalf className="text-2xl text-emerald-400" />,
+      icon: (
+        <FaRegHourglassHalf className="text-xl sm:text-2xl text-emerald-400" />
+      ),
       value: years,
       label: "Años de experiencia",
       suffix: "+",
       delay: 0.2,
     },
     {
-      icon: <FaUserGroup className="text-2xl text-emerald-400" />,
+      icon: <FaUserGroup className="text-xl sm:text-2xl text-emerald-400" />,
       value: clients,
       label: "Clientes satisfechos",
       suffix: "+",
       delay: 0.3,
     },
     {
-      icon: <FaHouseCircleCheck className="text-2xl text-emerald-400" />,
+      icon: (
+        <FaHouseCircleCheck className="text-xl sm:text-2xl text-emerald-400" />
+      ),
       value: homes,
       label: "Visitas a domicilio",
       suffix: "+",
       delay: 0.4,
     },
     {
-      icon: <FaHandsClapping className="text-2xl text-emerald-400" />,
+      icon: (
+        <FaHandsClapping className="text-xl sm:text-2xl text-emerald-400" />
+      ),
       value: satisfaction,
       label: "Tasa de satisfacción",
       suffix: "%",
@@ -75,21 +81,21 @@ export const Experience = () => {
         </div>
 
         {/* Contadores mejorados */}
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-gray-800 transition-all duration-300 shadow-lg max-w-[300px]"
+              className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-800 transition-all duration-300 shadow-lg w-full h-full"
             >
               <div className="flex flex-col items-center text-center h-full">
-                <div className="mb-3 sm:mb-4 p-2 sm:p-3 bg-emerald-900/20 rounded-full">
+                <div className="mb-3 p-2 sm:p-3 bg-emerald-900/20 rounded-full">
                   {metric.icon}
                 </div>
-                <h3 className="text-4xl sm:text-5xl font-bold text-white mb-2">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1 sm:mb-2">
                   {metric.value}
                   <span className="text-emerald-400">{metric.suffix}</span>
                 </h3>
-                <p className="text-gray-400 text-sm sm:text-base mt-auto">
+                <p className="text-gray-400 text-xs sm:text-sm md:text-base mt-auto">
                   {metric.label}
                 </p>
               </div>

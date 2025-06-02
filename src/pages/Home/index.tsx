@@ -11,10 +11,10 @@ export const HomePage = () => {
       <Header />
       <div className="bg-pattern">
         <AboutMe />
-        <Experience />
         <Services />
-        <WhyUs />
+        <Experience />
         <FAQSection />
+        <WhyUs />
       </div>
     </>
   );
