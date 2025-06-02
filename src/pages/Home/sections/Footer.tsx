@@ -102,10 +102,8 @@ export const Footer = () => {
             <div className="flex items-start gap-3">
               <FiClock className="text-emerald-400 mt-1 flex-shrink-0" />
               <div className="space-y-2">
-                <p className="text-white">Lunes - Viernes: 9:00 - 20:00</p>
-                <p className="text-white">Sábados: 10:00 - 14:00</p>
-                <p className="text-sm text-emerald-400">
-                  Servicio de emergencia 24/7
+                <p className="text-white">
+                  Abierto las 24h (incluido fechas y horarios festivos)
                 </p>
               </div>
             </div>
