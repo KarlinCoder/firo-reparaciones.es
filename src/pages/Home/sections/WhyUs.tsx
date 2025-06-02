@@ -50,7 +50,7 @@ export const WhyUs = () => {
 
   return (
     <section
-      id="whyus"
+      id="porquenosotros"
       className="relative bg-transparent py-24 overflow-hidden"
     >
       {/* Efecto de fondo */}

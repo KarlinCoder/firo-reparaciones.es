@@ -38,7 +38,7 @@ export const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 bg-gray-950">
+    <section id="preguntasfrecuentes" className="py-16 bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-emerald-900/20 border border-emerald-400/20 text-emerald-400 text-sm">

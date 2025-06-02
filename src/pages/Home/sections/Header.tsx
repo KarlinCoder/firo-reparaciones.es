@@ -6,7 +6,10 @@ export const Header = () => {
   const customEase = cubicBezier(0.6, 0.01, -0.05, 0.95);
 
   return (
-    <header className="relative w-full min-h-screen overflow-hidden flex items-center">
+    <header
+      id="inicio"
+      className="relative w-full min-h-screen overflow-hidden flex items-center"
+    >
       {/* Fondo con imagen y efecto parallax */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"

@@ -1,5 +1,6 @@
 import { FaAward } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
+import { Element } from "react-scroll";
 
 export const AboutMe = () => {
   const features = [
@@ -31,8 +32,8 @@ export const AboutMe = () => {
   ];
 
   return (
-    <section
-      id="sobremi"
+    <Element
+      name="sobremi"
       className="relative bg-transparent py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
     >
       {/* Background effects */}
@@ -121,6 +122,6 @@ export const AboutMe = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Element>
   );
 };
